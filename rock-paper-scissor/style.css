@@ -1,0 +1,155 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+        margin-top: 80px;
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.game-container {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.choice-btn {
+    font-size: 2.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    transition: all 0.3s;
+    background-color: #f0f0f0;
+}
+
+.choice-btn:hover {
+    transform: scale(1.1);
+    background-color: #e0e0e0;
+}
+
+.results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.player-choice, .computer-choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.choice-icon {
+    font-size: 4rem;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.choice-label {
+    font-weight: bold;
+    color: #555;
+}
+
+.vs {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #777;
+}
+
+.outcome {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    min-height: 2rem;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.reset-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reset-btn:hover {
+    background-color: #2980b9;
+}
+
+.winner {
+    animation: pulse 0.5s 3;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 480px) {
+    .game-container {
+        padding: 1rem;
+    }
+    
+    .choices {
+        gap: 0.5rem;
+    }
+    
+    .choice-btn {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    
+    .results {
+        gap: 1rem;
+    }
+    
+    .choice-icon {
+        font-size: 3rem;
+        width: 80px;
+        height: 80px;
+    }
+}
